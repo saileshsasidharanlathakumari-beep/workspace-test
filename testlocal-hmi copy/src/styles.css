@@ -1,0 +1,217 @@
+:root {
+  color-scheme: dark;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: #11151c;
+  color: #e8edf5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+.top,
+.card header,
+.settings,
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.top {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.kicker,
+.meta,
+.card p,
+small {
+  color: #9aa6b8;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.state,
+.pill,
+button {
+  border-radius: 999px;
+}
+
+.state,
+.pill {
+  padding: 6px 12px;
+  background: #1c2430;
+  text-transform: capitalize;
+}
+
+.state--running,
+.pill--run {
+  background: #16351f;
+  color: #8be3a5;
+}
+
+.settings,
+.card,
+.modal {
+  background: #171d27;
+  border: 1px solid #2a3342;
+  border-radius: 16px;
+}
+
+.settings {
+  padding: 16px;
+  margin-bottom: 16px;
+  align-items: stretch;
+}
+
+.settings label,
+.card label,
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  font-size: 13px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  background: #10151c;
+  border: 1px solid #334055;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.actions {
+  margin: 0 0 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  background: #2f6fed;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.busy {
+  color: #9aa6b8;
+}
+
+.error {
+  color: #ff8a8a;
+  margin-bottom: 16px;
+}
+
+.host-auth {
+  margin: 0 0 16px;
+  color: #8be3a5;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card--hmi {
+  border-color: #3d6ee8;
+}
+
+.card header {
+  justify-content: space-between;
+}
+
+.info {
+  min-height: 2.4em;
+}
+
+.card button {
+  align-self: start;
+  background: #243044;
+}
+
+.toasts {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.toast {
+  min-width: 240px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #243044;
+  display: grid;
+  gap: 4px;
+}
+
+.toast--true {
+  background: #16351f;
+}
+
+.toast--false {
+  background: #3a1d1d;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 8, 12, 0.72);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal {
+  width: min(460px, 100%);
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.modal button {
+  justify-self: start;
+}
